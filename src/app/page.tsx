@@ -3,7 +3,6 @@ import * as React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import BasicCard from "@/components/BasicCard";
 import { useUser } from "@auth0/nextjs-auth0/client";
-import styles from './styles.module.css'
 
 export default function HomePage() {
   const { user, error, isLoading } = useUser();
@@ -20,7 +19,7 @@ export default function HomePage() {
   if (error) return <div>{error.message}</div>;
   if (user) {
     return (
-      <div className={styles.card}>
+      <div>
         <Grid
           container
           direction="row"

@@ -22,7 +22,6 @@ import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { cookies } from "next/headers";
 import Image from "next/image";
-import styles from './styles.module.css'
 
 
 export const metadata = {
@@ -72,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <UserProvider>
-        <body className={styles.body}>
+        <body>
           <ThemeRegistry>
             <AppBar position="fixed" sx={{ zIndex: 2000 }}>
               <Toolbar sx={{ backgroundColor: "background.paper" }}>
@@ -114,7 +113,6 @@ export default function RootLayout({
               {getAuthLinks()}
             </Drawer>
             <Box
-              component=""
               sx={{
                 flexGrow: 1,
                 bgcolor: "background.default",
