@@ -25,7 +25,7 @@ export default function MediaCard({
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={onClick}>
+        <Button size="small" onClick={() => onClick()}>
           New Topic
         </Button>
       </CardActions>
