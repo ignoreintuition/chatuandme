@@ -30,7 +30,7 @@ export default function HomePage() {
           <Grid xs={6}>
             <BasicCard
               heading="Topic"
-              text={question}
+              text={question ? question : ""}
               onClick={() => {
                 fetch("/api")
                   .then((res) => res.json())
