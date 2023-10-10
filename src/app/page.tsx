@@ -9,7 +9,7 @@ export default function HomePage() {
 
   const [question, setQuestion] = React.useState();
   React.useEffect(() => {
-    fetch("/api")
+    fetch("/api", { cache: 'no-store' })
       .then((res) => res.json())
       .then((data) => {
         setQuestion(data.question);
